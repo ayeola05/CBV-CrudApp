@@ -1,13 +1,23 @@
 {% extends 'crud_app/base.html' %}
 
 {% block content %}
+
 <h1>Names of all the schools</h1>
+
+
+<div class="jumbotron">
   <ol>
     {% for school in school_list %}
       <h1><li><a href="{% url 'crud_app:detail' school.id %}">{{school.name}}</a></li></h1>
     {% endfor %}
   </ol>
 
+</div>
 
 
 {% endblock content %}
+
+
+
+
+
