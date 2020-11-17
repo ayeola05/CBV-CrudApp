@@ -19,4 +19,8 @@
   <p><a class="btn btn-warning" href="{% url 'crud_app:update'  school.id %}">Update</a></p>
 </div>
 
+<p>
+  <a class="btn btn-danger" href="{% url 'crud_app:delete' school.id %}">Delete {{school.name}}</a>
+</p>
+
 {% endblock content %}
