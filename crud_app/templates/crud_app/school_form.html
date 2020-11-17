@@ -1,0 +1,18 @@
+{% extends 'crud_app/base.html' %}
+
+
+{%  block content %}
+
+{% if not form.instance.pk %}
+  <h1>Create School</h1>
+{% else %}
+  <h1>Update School</h1>
+{% endif %}
+
+
+<form action="" method="POST">
+  {% csrf_token %}
+  {{form.as_p}}
+  <input type="submit" class='btn btn-primary'  value="Submit" name="" id="">
+</form>
+{% endblock content %}

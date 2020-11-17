@@ -1,0 +1,22 @@
+{% extends 'crud_app/base.html' %}
+
+
+{% block content %}
+
+<div class="jumbotron">
+  <h1>Welcome to the school detail page</h1>
+  <h1>School Details:</h1>
+
+  <h2>Name: {{school.name}}</h2>
+  <h2>Princial: {{school.principal}}</h2>
+  <h2>Location: {{school.location}}</h2>
+
+  <h3>Students:</h3>
+  {% for student in school.student.all %}
+  <p>{{student.name}} who is {{student.age}} years old.</p>
+  {% endfor %}
+
+  <p><a class="btn btn-warning" href="{% url 'crud_app:update'  school.id %}">Update</a></p>
+</div>
+
+{% endblock content %}
